@@ -1,0 +1,45 @@
+<div class="layout">
+  
+<div class="map">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8654070606726!2d77.6138759093001!3d13.04423801323129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1770e1959907%3A0x368dea11d919b8a8!2sEpsilon!5e0!3m2!1sen!2sin!4v1692689428404!5m2!1sen!2sin" width="600px" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
+</div>
+<div class="con">
+    <div class="container" style="    padding-bottom: 5vh;">
+        <h1>
+          Welcome to {{title}}!!
+        </h1>
+        <form [formGroup]="angForm" novalidate>
+              <div class="form-group">
+                  <label>Name:</label>
+                  <input class="form-control" formControlName="name" type="text">
+              </div>
+              <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" 
+               class="alert alert-danger">
+                  <div *ngIf="angForm.controls['name'].errors">
+                    Name is required.
+                  </div>
+       </div>
+               <div class="form-group">
+                  <label>Address:</label>
+                  <input class="form-control" formControlName="address" type="text">
+              </div>
+              <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)" 
+                 class="alert alert-danger">
+                  <div *ngIf="angForm.controls['address'].errors">
+                    addressl is required.
+                  </div>
+              </div>
+              <button type="submit"
+                  [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
+                  Save
+              </button>
+        </form>
+        <br />
+        <p>Form value: {{ angForm.value | json }}</p>
+        <p>Form status: {{ angForm.status | json }}</p>
+      </div>
+      
+      
+</div>
+</div>

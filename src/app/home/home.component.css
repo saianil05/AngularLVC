@@ -1,0 +1,9 @@
+.home
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+    font-size: xx-large;
+}
+

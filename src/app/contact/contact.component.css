@@ -1,0 +1,21 @@
+.layout
+{
+    display: flex;
+}
+.con
+{
+    padding-left: 10vh;
+    padding-top: 5vh;
+}
+.map
+{
+    padding: 10px;
+ margin-left: 18vw;
+ padding-top: 7vh;
+  
+  
+}
+iframe{
+    height :350px;
+    width: 350px;
+}

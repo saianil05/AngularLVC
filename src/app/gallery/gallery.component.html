@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-4 mb-3" *ngFor="let imageUrl of images; let i = index;">
+    <div class="thumbnail">
+    <a href="#">
+    <img [src]="imageUrl.url" alt="Image {{ i + 1 }}" style="width:100%">
+    </a>
+    </div>
+    </div>
+    </div>
